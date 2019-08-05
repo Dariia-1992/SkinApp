@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff0054</color>
+    <color name="colorPrimaryDark">#ff0054</color>
+    <color name="colorAccent">#ff0054</color>
+    <color name="colortools">#ff0054</color>
+    <color name="primary_dark">#252525</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="secondary_text_color">#989898</color>
+    <color name="navigation_separator">#6b6b6b</color>
+    <color name="tabs_background">#363636</color>
+    <color name="install_small_text_color">#696969</color>
+
+    <color name="v2_colorPrimary">#aa00ff</color>
+    <color name="v2_colorPrimaryDark">#7b06b5</color>
+    <color name="navbar_background">#ebebeb</color>
+    <color name="navbar_text">#464646</color>
+    <color name="divider_color">#707070</color>
+    <color name="primaryTextColor">#2b2b2b</color>
+    <color name="horizontal_divider_color">#959595</color>
+    <color name="skin_views_color">#aa00ff</color>
+    <color name="skin_downloads_color">#2c79d9</color>
+    <color name="skin_size_color">#4d4d4d</color>
+    <color name="screen_background">#f3f3f3</color>
+    <color name="skins_background">#d6d6d6</color>
+    <color name="skin_item_bottom_container">#f3f3f3</color>
+    <color name="skins_item_bottom_text_color">#a9a9a9</color>
+    <color name="save_layout_color">#00aeef</color>
+    <color name="export_layout_color">#39b54a</color>
+
+</resources>

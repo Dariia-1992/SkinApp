@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_margin">5dp</dimen>
+    <dimen name="activity_padding">8dp</dimen>
+    <dimen name="activity_height">80dp</dimen>
+    <dimen name="image_width">100dp</dimen>
+    <dimen name="background_tab_padding_side">12dp</dimen>
+    <dimen name="background_tab_padding_top">4dp</dimen>
+    <dimen name="skin_item_width">120dp</dimen>
+    <dimen name="skin_item_height">202dp</dimen>
+    <dimen name="details_button_height">44dp</dimen>
+    <dimen name="alert_dialog_image_size">90dp</dimen>
+    <dimen name="toolbar_height">54dp</dimen>
+    <dimen name="skin_container_height">264dp</dimen>
+    <dimen name="skin_round_button_size">53dp</dimen>
+    <dimen name="skin_buttons_container_margin_top">237dp</dimen>     // 264dp - 53dp / 2
+    <dimen name="horizontal_divider_height">46dp</dimen>
+    <dimen name="skin_info_text_size">18sp</dimen>
+    <dimen name="skin_info_secondary_text_size">18sp</dimen>
+
+</resources>

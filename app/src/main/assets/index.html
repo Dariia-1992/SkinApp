@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<!--background-color: #ffffff;-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<title>skinreview</title>
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+	<style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+	</style>
+
+</head>
+
+<body>
+
+<div id="skin_container" ></div>
+
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="three.min.js"></script>
+<script type="text/javascript" src="skinview3d.js"></script>
+
+
+<script>
+
+
+	function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+	}
+
+		let skinViewer = new skinview3d.SkinViewer({
+			domElement: document.getElementById("skin_container"),
+			enableZoom: false,
+			enablePan: false,
+		});
+		skinViewer.playerObject.skin.slim = true;
+		let control = new skinview3d.createOrbitControls(skinViewer);
+		skinViewer.animation = new skinview3d.CompositeAnimation();
+		control.enableZoom = false;
+		control.enablePan = false;
+
+		skinViewer.skinUrl = getParameterByName('url');
+
+		let walk = skinViewer.animation.add(skinview3d.WalkingAnimation);
+		walk.speed = 0.8;
+
+
+
+	</script>
+
+
+</body>
+
+</html>

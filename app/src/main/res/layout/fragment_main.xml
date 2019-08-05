@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/toolbar_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/toolbar_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                android:background="@color/v2_colorPrimary">
+
+                <ImageView
+                    android:id="@+id/toolbar_menu"
+                    android:layout_width="30dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/toolbar_menu"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"/>
+
+                <TextView
+                    android:id="@+id/toolbar_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/toolbar_menu"
+                    android:layout_toLeftOf="@id/toolbar_search"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    android:text="@string/app_name"
+                    android:textAppearance="@style/ToolbarTextAppearance.Title"/>
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/toolbar_menu"/>
+
+                <ImageView
+                    android:id="@+id/toolbar_search"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/search"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_below="@id/toolbar_container"
+                android:background="@color/black"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/tabs_background"
+            android:layout_below="@id/toolbar_header">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/button_latest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:background="@drawable/background_tab_button"
+                        android:paddingLeft="@dimen/background_tab_padding_side"
+                        android:paddingRight="@dimen/background_tab_padding_side"
+                        android:paddingTop="@dimen/background_tab_padding_top"
+                        android:paddingBottom="@dimen/background_tab_padding_top"
+                        android:text="@string/latest" />
+
+                    <TextView
+                        android:id="@+id/button_favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/button_latest"
+                        android:textColor="@color/white"
+                        android:background="@null"
+                        android:paddingLeft="@dimen/background_tab_padding_side"
+                        android:paddingRight="@dimen/background_tab_padding_side"
+                        android:paddingTop="@dimen/background_tab_padding_top"
+                        android:paddingBottom="@dimen/background_tab_padding_top"
+                        android:layout_centerVertical="true"
+                        android:text="@string/favourite"/>
+
+                    <TextView
+                        android:id="@+id/button_most_downloads"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/button_favorite"
+                        android:textColor="@color/white"
+                        android:background="@null"
+                        android:paddingLeft="@dimen/background_tab_padding_side"
+                        android:paddingRight="@dimen/background_tab_padding_side"
+                        android:paddingTop="@dimen/background_tab_padding_top"
+                        android:paddingBottom="@dimen/background_tab_padding_top"
+                        android:layout_centerVertical="true"
+                        android:text="@string/most_downloads"/>
+
+                    <TextView
+                        android:id="@+id/button_most_views"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/button_most_downloads"
+                        android:textColor="@color/white"
+                        android:background="@null"
+                        android:paddingLeft="@dimen/background_tab_padding_side"
+                        android:paddingRight="@dimen/background_tab_padding_side"
+                        android:paddingTop="@dimen/background_tab_padding_top"
+                        android:paddingBottom="@dimen/background_tab_padding_top"
+                        android:layout_centerVertical="true"
+                        android:text="@string/most_views"/>
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/sort_image"-->
+                <!--android:layout_width="36dp"-->
+                <!--android:layout_height="36dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:src="@drawable/sort_ascending"/>-->
+
+        </RelativeLayout>
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tab_layout"
+            android:background="@color/skins_background">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:paddingLeft="4dp"
+                android:layout_marginRight="4dp"/>
+            
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@color/navbar_background"
+                app:itemTextColor="@color/navbar_text"
+                app:menu="@menu/navigation_menu"/>
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
